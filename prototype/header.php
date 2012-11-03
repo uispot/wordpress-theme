@@ -34,7 +34,7 @@
 
 	<div id="container">
 
-
+        <?php get_template_part( 'menu', 'secondary' ); // Loads the menu-secondary.php template. ?>
 
 		<?php do_atomic( 'before_header' ); // prototype_before_header ?>
 
@@ -61,9 +61,7 @@
 
 		<?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
 
-		<?php do_atomic( 'after_header' ); // prototype_after_header ?>
-
-		<?php get_template_part( 'menu', 'secondary' ); // Loads the menu-secondary.php template. ?>
+		<?php do_atomic( 'after_header' ); // prototype_after_header ?>		
 
 		<?php do_atomic( 'before_main' ); // prototype_before_main ?>
 		

@@ -69,7 +69,7 @@ function prototype_theme_setup() {
 	add_theme_support( 'custom-background', array( 'default-color' => 'f9f9f9' ) );
 
 	/* Add the search form to the secondary menu. */
-	add_action( "{$prefix}_close_menu_secondary", 'get_search_form' );
+	//add_action( "{$prefix}_close_menu_secondary", 'get_search_form' );
 
 	/* Embed width/height defaults. */
 	add_filter( 'embed_defaults', 'prototype_embed_defaults' );

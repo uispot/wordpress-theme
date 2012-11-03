@@ -35,14 +35,14 @@ get_header(); // Loads the header.php template. ?>
 
 						<?php echo apply_atomic_shortcode( 'entry_title', '[entry-title]' ); ?>
 
-						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( '[entry-published] [entry-terms taxonomy="category" before="分类："] [entry-comments-link] [entry-edit-link before=" | "]', 'prototype' ) . '</div>' ); ?>
+						<?php echo apply_atomic_shortcode( 'byline', '<div class="byline">' . __( '[entry-published] [entry-terms taxonomy="category" before="分类："] [entry-comments-link] [entry-edit-link before=" | "]' . '<p>[entry-terms before="标签："]</p>', 'prototype' ) . '</div>' ); ?>
 
 						<div class="entry-summary">
 							<?php the_excerpt(); ?>
 							<?php wp_link_pages( array( 'before' => '<p class="page-links">' . __( 'Pages:', 'prototype' ), 'after' => '</p>' ) ); ?>
 						</div><!-- .entry-summary -->
 
-						<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( ' [entry-terms before="标签："]', 'prototype' ) . '</div>' ); ?>
+						<!--<?php echo apply_atomic_shortcode( 'entry_meta', '<div class="entry-meta">' . __( '[entry-terms before="标签："] ', 'prototype' ) . '</div>' ); ?>-->
 
 						<?php do_atomic( 'close_entry' ); // prototype_close_entry ?>
 

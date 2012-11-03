@@ -30,24 +30,28 @@
 
 <?php get_sidebar( 'subsidiary' ); // Loads the sidebar-subsidiary.php template. ?>
 
-		<div id="footer">
-			
-			<?php get_template_part( 'menu', 'subsidiary' ); // Loads the menu-subsidiary.php template. ?>
+		<div id="footer">		
 			
 			<?php do_atomic( 'open_footer' ); // prototype_open_footer ?>
 
 			<div class="wrap">
+				<?php get_template_part( 'menu', 'subsidiary' ); // Loads the menu-subsidiary.php template. ?>
+				<div class="footerCon">
 				<?php echo apply_atomic_shortcode( 'footer_content', hybrid_get_setting( 'footer_insert' ) ); ?>
-
+				
+				<!-- 51.la -->
+				<script language="javascript" type="text/javascript" src="http://js.users.51.la/3234015.js"></script>
+				<noscript><a href="http://www.51.la/?3234015" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/3234015.asp" style="border:none" /></a></noscript>
+				</div>
 				<?php do_atomic( 'footer' ); // prototype_footer ?>
+				
+				
 
 			</div><!-- .wrap -->
 
 			<?php do_atomic( 'close_footer' ); // prototype_close_footer ?>
-<a href="http://www.uispot.com/sitemap.html">网站地图</a>
-<!-- 51.la -->
-<script language="javascript" type="text/javascript" src="http://js.users.51.la/3234015.js"></script>
-<noscript><a href="http://www.51.la/?3234015" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/3234015.asp" style="border:none" /></a></noscript>
+
+
 
 
 		</div><!-- #footer -->
@@ -89,12 +93,13 @@ window.onscroll = function() {
 </script>
 
 <script type="text/javascript">
-	jquery(".wp-tag-cloud a").append("<span></span>");
+jquery(document).ready(function(){
+	jqurey(".wp-tag-cloud a").append("<span></span>");
 	jquery(".wp-tag-cloud a").find("span").html(function(){
 		var s = jquery(this).parent().attr("title").replace(/[^0-9]/ig,"");
 		return "["+parselnt(s)+"]";
 	})
-
+})
 </script>
 </body>
 </html>

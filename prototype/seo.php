@@ -1,4 +1,4 @@
-﻿<?php if ( is_home() ) { ?><title><?php bloginfo('name')?> - <?php bloginfo('description')?></title><?php } ?>
+<?php if ( is_home() ) { ?><title><?php bloginfo('name')?> - <?php bloginfo('description')?></title><?php } ?>
 <?php if ( is_search() ) { ?><title>搜索结果 - <?php bloginfo('name'); ?></title><?php } ?>
 <?php if ( is_author() ) { ?><title>作者归档 - <?php bloginfo('name'); ?></title><?php } ?>
 <?php if ( is_404() ) { ?><title>Error 404 - Not Found - <?php bloginfo('name'); ?></title><?php } ?>
