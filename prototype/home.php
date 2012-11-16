@@ -67,5 +67,32 @@ get_header(); // Loads the header.php template. ?>
 	</div><!-- #content -->
 
 	<?php do_atomic( 'after_content' ); // prototype_after_content ?>
+<div style="width:430px; float:right">
+					<?php get_sidebar( 'primary' ); // Loads the sidebar-primary.php template. ?>
+				
+					<?php get_sidebar( 'secondary' ); // Loads the sidebar-secondary.php template. ?>
+					<?php do_atomic( 'close_main' ); // prototype_close_main ?>
+					<div class="clear"></div>
+				</div>
+			</div><!-- .wrap -->
+
+		</div><!-- #main -->
+
+		<?php do_atomic( 'after_main' ); // prototype_after_main ?>
+
+		
+
+		<?php do_atomic( 'before_footer' ); // prototype_before_footer ?>
+
+<?php get_sidebar( 'subsidiary' ); // Loads the sidebar-subsidiary.php template. ?>
+
+<div class="links">
+	
+	<h2>友情链接：</h2>
+	<ul>
+	<?php get_links('-1', '<li>', '</li>', '', 0, 'name', 0, 0, -1, 0); ?>
+	</ul>
+	<div class="clear"></div>
+</div>
 
 <?php get_footer(); // Loads the footer.php template. ?>

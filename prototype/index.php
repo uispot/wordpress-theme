@@ -65,5 +65,11 @@ get_header(); // Loads the header.php template. ?>
 	</div><!-- #content -->
 
 	<?php do_atomic( 'after_content' ); // prototype_after_content ?>
-
+</div>
+<div class="links">
+	<ul>
+	<li><b>友情链接：</b></li>//<?php get_links('-1', '<li>', '</li>', '', 0, 'name', 0, 0, -1, 0); ?>
+	</ul>
+<div class="clear"></div>
+</div>
 <?php get_footer(); // Loads the footer.php template. ?>

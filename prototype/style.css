@@ -34,7 +34,7 @@ b,i,hr,u,center,menu,layer,s,strike,font,xmp {
 }
 body {
 	color:#111;
-	background:#EEEEEE;
+	background-color:#EEEEEE;
 	font:13px/22px Verdana,Arial,Tahoma;
 }
 h1,h2,h3,h4,h5,h6 {
@@ -168,22 +168,12 @@ a:hover {
     border-bottom: 1px dotted transparent;
 }*/
 a:link, a:active, a:focus {
-    color: #AA2105;
-    outline: medium none;
-    text-decoration: none;
+    color: #3366FF;
+    text-decoration: underline;
 }
 a:visited {
-    color: #94452D;
-    outline: medium none;
-    text-decoration: none;
 }
 a:hover {
-    background-color: #AA2104;
-    color: #FFFFF9;
-    text-decoration: none;
-}
-a:hover em {
-    background-color: #AA2104;
 }
 
 pre {
@@ -605,6 +595,7 @@ textarea {
 	line-height:180%;
 	margin-bottom:18px;
 }
+.entry-content a:link,.entry-content a:visited,.entry-content a:hover{color:green; text-decoration:underline; background:none;}
 .entry-content ol,.entry-content ul{list-style-position: outside; margin: 10px 0 10px 26px;}
 .entry-content li{margin: 0 0 5px;}
 
@@ -712,6 +703,7 @@ img.wp-smiley {
 	margin:0;
 	color:#777;
 	font-weight:bold;
+	text-decoration:none;
 }
 #menu-primary li ul {
 	border-top:1px solid #dfdfdf;
@@ -936,10 +928,9 @@ img.wp-smiley {
 }
 .entry-title a {
 	color:#000;
-	border-bottom:none;
 }
 .entry-title a:hover {
-	color:#fff;
+	
 }
 .byline {
 	margin:0 0 10px 0;
@@ -1317,14 +1308,7 @@ img.wp-smiley {
 }
 /*  */
 /*#container{background:url("./images/header-bg.png") no-repeat fixed center top;}*/
-#background {
-    left: 0;
-    min-height: 100%;
-    min-width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: -1;
-}
+
 .ds-recent-visitors a img{display:inline;}
 
 #ds-recent-visitors div.ds-avatar {

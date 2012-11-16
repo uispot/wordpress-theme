@@ -10,8 +10,8 @@
  * @package Prototype
  * @subpackage Template
  */
-?>
-				<div style="width:430px; float:right">
+?>				
+<div style="width:430px; float:right">
 					<?php get_sidebar( 'primary' ); // Loads the sidebar-primary.php template. ?>
 				
 					<?php get_sidebar( 'secondary' ); // Loads the sidebar-secondary.php template. ?>
@@ -67,7 +67,6 @@
 
 <!-- 钓鱼岛 -->
 <div style="left:0px; bottom:20px; position:fixed;_position:absolute;_top: expression(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight); overflow:visible;"><a target="_blank" href="http://weibo.com/uispot"><img src="/wp-content/uploads/pic/diaoyudao.png"></a></div>
-<img alt="Home" src="http://turbo.themezilla.com/scope/files/2012/02/Design_Museum_A4-A5-A6_bg.jpg" id="background" class="bgwidth">
 
 <!-- 浮动 -->
 <script type="text/javascript">
