@@ -1,0 +1,199 @@
+@charset "utf-8";
+/*
+Theme Name: Jia Zhen
+Theme URI: http://www.uispot.com
+Description: It's a theme create by A-Jian
+Version: 1.0
+Author: A-Jian
+Author URI: A-Jian
+Tags: custom header, fixed width, two columns, widgets
+*/
+
+/* Global Styles */
+body,h1,h2,h3,h4,h5,div,p,ul,li,dl,dd,dt,em,strong{ margin:0; padding:0;}
+li{ list-style:none;}
+body, button, input, select, textarea {
+    color: #333333;
+    font: 12px/1.5 arial,宋体;
+}
+img{ border:none;}
+
+.clearfix { display: block;}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+a { color: #118DD0; text-decoration:none;}
+a:hover { color: #118DD0; text-decoration:underline;}
+
+.wrapper{ width:980px; margin:0 auto;}
+
+.top-head{ text-align:right; height:24px; padding:10px 0; background:url(./images/top-head-bg.gif) repeat-x;}
+.top-head h1{ font-size:12px; font-weight:normal; float:left; padding-left:10px; border-left:5px solid #ED901D;}
+
+#header{}
+#header h2{ display:block; height:90px; line-height:87px; font-family: "微软雅黑"; font-size:16px; color:#666; float:left;}
+#header h2 img{ vertical-align:middle;}
+#header .qq-contect{ float:right;}
+
+.nav{ margin-bottom:15px;}
+.nav ul{ height:37px; line-height:37px; background:url(./images/navBg.gif) repeat-x;}
+.nav ul li{float:left; }
+.nav ul li a{ display:block; color:#fff; padding:0 22px 0 20px; background:url(./images/nav-line.gif) no-repeat right center;}
+
+/* banner */
+.focus {
+    height: 370px;
+    margin: 0 auto 15px;
+    position: relative;
+    width: 980px;
+    z-index: 10;
+}
+#slide {
+    background: url("./images/loading.gif") no-repeat scroll center center transparent;
+    height: 370px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 980px;
+    z-index: 20;
+}
+#slide ul {
+    height: 370px;
+    position: absolute;
+    width: 980px;
+}
+#slide li {
+    float: left;
+    height: 370px;
+    overflow: hidden;
+    width: 980px;
+}
+#slide .o-control {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 125px;
+}
+#slide .o-control:hover {
+    opacity: 0.6;
+}
+#slide .control {
+    background: url("./images/sprite.png") repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 50px;
+    opacity: 0.6;
+    position: relative;
+    width: 22px;
+}
+#slide #goback {
+    left: 10px;
+    z-index: 40;
+}
+#goback .control {
+    background-position: 0 0;
+}
+#slide #forward {
+    right: 10px;
+    z-index: 40;
+}
+#forward .control {
+    background-position: -28px 0;
+}
+#slide div.slide-num {
+    bottom: 10px;
+    display: none;
+    float: right;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    right: 430px;
+    z-index: 40;
+}
+#slide span {
+    background: none repeat scroll 0 0 #996633;
+    cursor: pointer;
+    float: left;
+    font-family: arial;
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+    margin: 2px;
+    opacity: 0.7;
+    text-align: center;
+    width: 32px;
+}
+#slide span a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#slide span.curr, #slide span.hover {
+    background: none repeat scroll 0 0 #000000;
+    opacity: 1;
+}
+#slide .curr a:link, #slide .curr a:visited {
+    color: #FFFFFF;
+}
+
+#cont{ margin-bottom:15px;}
+#cont .main{ width:720px; float:right;}
+	.main .gonggao{ line-height:30px;}
+	.main .gonggao a:link,.main .gonggao a:visited{ color:#ff0000; font-weight:bold;}
+	.main .about{ margin-bottom:15px;}
+	.main .gz-times{ line-height:30px;}
+	.main .gz-times span{ color:#F60;}
+	.main .bmtj .hd{ background:url(./images/bm-pic.gif) no-repeat left center; height:30px; line-height:30px; border:1px solid #ddd; border-bottom:none; text-align:right;}
+	.main .bmtj .hd h3{ color:#fff; padding-left:10px; float:left}
+	
+	.main .bmtj .box{ border:1px solid #ddd; padding:10px 0 0px 10px; margin-bottom:15px;}
+	.main .bmtj .box ul{ padding-left:110px; float:left; width:125px; margin-bottom:15px;}
+	.main .bmtj .box ul li{ line-height:24px;}
+	.main .bmtj .box ul li.bm-pic{ float:left; margin-left:-110px;}
+	.main .bmtj .box ul li.name span{ color:#ff0000;}
+	.main .bmtj .box ul li a.more{ background:url(show-pic.gif) no-repeat; display:block; width:73px; height:21px; text-indent:-9999px;}
+	
+	.main .zhishi{ position:relative; margin-left:-10px; margin-bottom:15px;}
+	.main .zhishi .lanmu{ border:1px solid #ddd; width:350px; float:left; margin-left:12px;}
+	.main .zhishi .lanmu .hd{ text-align:right; height:30px; line-height:30px; background:url(./images/bm-pic.gif) no-repeat left center; color:#fff; padding:0 10px;}
+	.main .zhishi .lanmu .hd h3{ float:left;}
+	.main .zhishi .lanmu .box{ padding:10px;}
+	.main .zhishi .lanmu .box ul li{ line-height:30px; padding-left:20px; border-bottom:1px dashed #ddd; background:url(./images/icon.jpg) no-repeat left center;}
+	
+	.main .khxq{ border:1px solid #ddd;}
+	.main .khxq .hd{ background:url(./images/bm-pic.gif) no-repeat left center; height:30px; line-height:30px; color:#fff;}
+	.main .khxq .hd h3{ padding-left:10px;}
+	.main .khxq .box{ padding:10px;}
+	.main .khxq .box ul li{ float:left; width:230px;}
+#cont .sidebar{ width:250px; float:left;}
+#cont .about{ border:1px solid #ddd; padding:10px; text-indent:2em; line-height:24px;}
+#cont .about a.more{ float:right;}
+#cont .about img{ float: right; margin-left:15px;}
+
+/*.sidebar .lanmu{ margin-bottom:15px;}
+.sidebar .lanmu li h3{ height:29px; line-height:29px; background:url(./images/sid-bt-bg.jpg) no-repeat; padding:0 10px; color:#fff;}
+.sidebar .lanmu li a:link,.sidebar .lanmu li a:visited{ display:block; height:30px; line-height:30px; padding-left:30px; border-bottom:1px dashed #ddd; background:url(./images/icon.jpg) no-repeat 10px center; color:#333; overflow:hidden;}
+.sidebar .lanmu li a:hover,{ border-bottom:1px solid #ccc; background-position:15px center; text-decoration:none;}*/
+.sidebar li.widget{ margin-bottom:15px;}
+.sidebar li.widget h2{ height:29px; line-height:29px; background:url(./images/sid-bt-bg.jpg) no-repeat; padding:0 10px; color:#fff;}
+.sidebar li.widget ul li a:link,.sidebar li.widget ul li a:visited{ display:block; height:30px; line-height:30px; padding-left:30px; border-bottom:1px dashed #ddd; background:url(./images/icon.jpg) no-repeat 10px center; color:#333; overflow:hidden;}
+.sidebar li.widget ul li a:hover{ border-bottom:1px solid #ccc; background-position:15px center; text-decoration:none;}
+
+.links{ border:1px solid #ddd;}
+.links .hd{ background:url(./images/bm-pic.gif) no-repeat left center; height:30px; line-height:30px; text-align:right; padding:0 10px;}
+.links .hd h4{float:left;color:#fff; }
+.links .box { padding:10px;}
+.links .box ul li{ float:left; margin-right:15px;}
+
+/* POST */
+.post p { line-height:21px; margin-bottom:15px;}
+.post .title,.post p.sub{ text-align:center;}
+.post .title { font-size:16px; line-height:30px; margin-top:15px;}
+.post .hr{ border-bottom:1px solid #ddd; margin-bottom:15px;}
+
+#footer{ text-align:center; margin:15px auto 0; padding:15px 0; background:#eee; line-height:21px; border-top:1px solid #ddd;}
