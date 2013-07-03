@@ -1,26 +1,40 @@
-<?php get_header(); ?>
+<?php 
+	get_header(); 	
+?>
 
 <div class="banner">
     <div class="focus">
         <div id="slide"></div>
     </div>
+
     <script type="text/javascript">
 		$("#slide").jdSlide({
-			width:980,height:370,pics:[
-				{src:"<?php bloginfo('template_url'); ?>/images/banner1.jpg",href:"#",alt:"",breviary:"#",type:"img"},
-				{src:"<?php bloginfo('template_url'); ?>/images/banner2.jpg",href:"#",alt:"",breviary:"#",type:"img"},
-				{src:"<?php bloginfo('template_url'); ?>/images/banner3.jpg",href:"#",alt:"",breviary:"#",type:"img"}
-				]
+			width:980,height:251,pics:[
+			{src:"http://www.jiazheng114.com/wp-content/themes/jiazheng/images/banner1.jpg",href:"#",alt:"图片1",breviary:"#",type:"img"},
+			{src:"http://www.jiazheng114.com/wp-content/themes/jiazheng/images/banner2.jpg",href:"#",alt:"图片2",breviary:"#",type:"img"},
+			{src:"http://www.jiazheng114.com/wp-content/themes/jiazheng/images/banner3.jpg",href:"#",alt:"图片3",breviary:"#",type:"img"}
+			<?php
+			/*$tplh = explode("\n",get_option('ir_sm_tplh')); 
+			foreach( $tplh as $row ) { 
+				//echo "<div>".$row."</div>"; 
+				$arr[] = explode("|",$row);
+			} 
+			//print_r($arr);
+			foreach($arr as $row1){			
+				echo '{src:"'.bloginfo('template_url').$row1[0].'",href:"'.$row1[1].'",alt:"'.$row1[2].'",breviary:"#",type:"img"},'
+			}*/ 
+			?>
+			]
 			})
 	</script>
 </div>
 <div id="cont" class="clearfix">
 	<div class="main">
-    	<div class="gonggao"><b>活动公告：</b><a href="#">月嫂、育儿嫂培训进行中、火热报名......</a></div>
+    	<div class="gonggao"><b>活动公告：</b><?php $sa = explode("\n",get_option('ir_sm_tan')); foreach( $sa as $row ) { echo "<span>".$row."</span>"; } ?></div>
         <div class="about clearfix">
         	<a href="#"><img src="<?php bloginfo('template_url'); ?>/images/card-pic.jpg" width="239" height="148" alt="" /></a>
-        	<p>北京家政服务公司|北京安佳家政服务公司在北京市工商局正式登记注册，是具备 独立法人资格的企业。 北京恩贝佳家政服务公司下设一分公司，二分公司，三分公司，四分公司（ 分布在崇文区家政公司、朝阳区家政公司、宣武区家政公司、丰台区家政公司）安佳 家政服务公司只一支专业取使家政公司、服务与广大市民理想选择的....</p>
-            <a href="#" class="more">查看详细&gt;&gt;</a>
+        	<p><?php $about = get_option('ir_sm_about'); echo $about;?></p>
+            <a href="<?php bloginfo('url');echo "/about"; ?>" class="more">查看详细&gt;&gt;</a>
         </div>
         <div class="bmtj">
         	
@@ -31,16 +45,12 @@
             <div class="box clearfix">
 			
 				<?php 
-						$recent = new WP_Query("cat=2&showposts=6"); 
+						$recent = new WP_Query("cat=13&showposts=6"); 
 						while($recent->have_posts()) : $recent->the_post();
 						?>
-							<li><a href=""></a></li>
 						
             	<ul>
-                	<li class="bm-pic">
-                    	<a href="<?php the_permalink() ?>"><img src="<?php bloginfo('template_url'); ?>/images/pic-1.jpg" width="100" height="130" alt="保姆：<?php the_title(); ?>" /></a><br />
-                    	推荐：<img src="<?php bloginfo('template_url'); ?>/images/zs-pic-5.gif" width="70" height="15" />
-					</li>
+                	
 					<?php
 					$xingzhi = get_post_meta($post->ID, "xingzhi_value", true);
 					$age = get_post_meta($post->ID, "age_value", true);
@@ -48,15 +58,21 @@
 					$jiguan = get_post_meta($post->ID, "jiguan_value", true);
 					$xueli = get_post_meta($post->ID, "xueli_value", true);
 					?>
-                    <li class="name">姓名：<?php the_title(); ?> <span><?php echo $xingzhi;?></span></li>
+                    <li class="name">姓名：<a href="<?php the_permalink() ?>"><?php the_title(); ?></a> <br><span><?php echo $xingzhi;?></span></li>
                     <li>年龄：<?php echo $age;?></li>
                     <li>民族：<?php echo $minzu;?></li>
                     <li>籍贯：<?php echo $jiguan;?></li>
                     <li>学历：<?php echo $xueli;?></li>
                     <li></li>
-                    <li><a href="<?php the_permalink() ?>" class="more">查看详细</a></li>
+                    <li><a href="<?php the_permalink() ?>">查看详细资料</a></li>
+					
+					<li class="bm-pic">
+						<a href="<?php the_permalink() ?>"><img src="<?php $catch_img=catch_that_image(); echo $catch_img; ?>" width="100" height="130" alt="保姆：<?php get_the_title(); ?>"  title="保姆：<?php get_the_title(); ?>"/></a>                
+                    	<br />
+                    	推荐：<img src="<?php bloginfo('template_url'); ?>/images/zs-pic-5.gif" width="70" height="15" />
+					</li>					
                 </ul>
-                <?php endwhile; ?>
+				<?php endwhile; ?>
             </div>
         </div>
         
@@ -64,12 +80,12 @@
         	<div class="jzzs lanmu">
             	<div class="hd">
                 	<h3>家政知识</h3>
-                    <a href="#">更多</a>
+                    <a href="<?php bloginfo('url');?>/?cat=5">更多</a>
                 </div>
                 <div class="box">
                 	<ul>
 					<?php 
-					$recent = new WP_Query("cat=1&showposts=6"); 
+					$recent = new WP_Query("cat=5&showposts=6"); 
 					while($recent->have_posts()) : $recent->the_post();
 					?>
                     	<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
@@ -81,12 +97,12 @@
             <div class="myzs lanmu">
             	<div class="hd">
                 	<h3>母婴知识</h3>
-                    <a href="#">更多</a>
+                    <a href="<?php bloginfo('url');?>/?cat=6">更多</a>
                 </div>
                 <div class="box">
                 	<ul>
                     	<?php 
-						$recent = new WP_Query("cat=1&showposts=6"); 
+						$recent = new WP_Query("cat=6&showposts=6"); 
 						while($recent->have_posts()) : $recent->the_post();
 						?>
 							<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
@@ -103,7 +119,7 @@
             <div class="box">
             	<ul class="clearfix">
                 	<?php 
-						$recent = new WP_Query("cat=1&showposts=6"); 
+						$recent = new WP_Query("cat=12&showposts=6"); 
 						while($recent->have_posts()) : $recent->the_post();
 						?>
 							<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
@@ -124,11 +140,7 @@
     </div>
     <div class="box">
         <ul class="clearfix">
-            <li><a href="#">北京家政网</a></li>
-            <li><a href="#">北京家政网</a></li>
-            <li><a href="#">北京家政网</a></li>
-            <li><a href="#">北京家政网</a></li>
-            <li><a href="#">北京家政网</a></li>
+            <?php get_links('-1','<li>','</li>'); ?>
         </ul>
     </div>
 </div>

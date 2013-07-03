@@ -3,7 +3,9 @@
 <div id="cont" class="clearfix">
 	<div class="main">
 		<!-- place -->
-		<div class="place">当前位置：首页 - 家政知识</div>
+		<div class="place"><b>当前位置:</b> <a href="<?php bloginfo('url');?>"><?php bloginfo('name') ; ?></a>
+		<?php if(is_page()){  echo " &gt; "; the_category('&gt;');}else{ echo " &gt; "; the_category('&gt;');echo " &gt; ";the_title();}; ?></div>
+		
 		
 		<?php if (have_posts()) : the_post(); update_post_caches($posts); ?>
     	<!-- Blog Post -->
@@ -29,7 +31,7 @@ foreach($wenzhang as $v){
 	$term_id = $v->term_id;
 }
 
-if($term_id != '3'){
+if($term_id == '13'){
 
 $xingzhi = get_post_meta($post->ID, "xingzhi_value", true);
 $age = get_post_meta($post->ID, "age_value", true);
@@ -39,7 +41,7 @@ $xueli = get_post_meta($post->ID, "xueli_value", true);
 ?>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td width="360" rowspan="5">&nbsp;</td>
+    <td width="360" rowspan="5"><img src="<?php post_thumbnail_src(100); ?>" alt="保姆：<?php the_title(); ?>"  title="保姆：<?php the_title(); ?>"/></td>
     <td>姓名：<?php the_title(); ?> <span><?php echo $xingzhi;?></span></td>
     <td>&nbsp;</td>
   </tr>

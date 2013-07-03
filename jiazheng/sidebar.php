@@ -57,7 +57,18 @@ wp_nav_menu($bjfw);
 				</ul>
 			</li>
 
-        </ul>
+				<li class="widget widget_recent_entries">		<h2 class="widgettitle">家政服务常识</h2>
+		<ul>
+					<?php 
+					$recent = new WP_Query("cat=3,5,6&showposts=10"); 
+					while($recent->have_posts()) : $recent->the_post();
+					?>
+                    	<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+					<?php endwhile; ?>
+
+				</ul>
+		</li>
+		</ul>
 		<ul>	
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>    	
 		<?php endif; ?>

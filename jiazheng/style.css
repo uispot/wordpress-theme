@@ -48,7 +48,7 @@ a:hover { color: #118DD0; text-decoration:underline;}
 
 /* banner */
 .focus {
-    height: 370px;
+    height: 251px;
     margin: 0 auto 15px;
     position: relative;
     width: 980px;
@@ -56,7 +56,7 @@ a:hover { color: #118DD0; text-decoration:underline;}
 }
 #slide {
     background: url("./images/loading.gif") no-repeat scroll center center transparent;
-    height: 370px;
+    height: 251px;
     margin: 0 auto;
     overflow: hidden;
     position: absolute;
@@ -65,13 +65,13 @@ a:hover { color: #118DD0; text-decoration:underline;}
     z-index: 20;
 }
 #slide ul {
-    height: 370px;
+    height: 251px;
     position: absolute;
     width: 980px;
 }
 #slide li {
     float: left;
-    height: 370px;
+    height: 251px;
     overflow: hidden;
     width: 980px;
 }
@@ -152,9 +152,9 @@ a:hover { color: #118DD0; text-decoration:underline;}
 	.main .bmtj .hd h3{ color:#fff; padding-left:10px; float:left}
 	
 	.main .bmtj .box{ border:1px solid #ddd; padding:10px 0 0px 10px; margin-bottom:15px;}
-	.main .bmtj .box ul{ padding-left:110px; float:left; width:125px; margin-bottom:15px;}
-	.main .bmtj .box ul li{ line-height:24px;}
-	.main .bmtj .box ul li.bm-pic{ float:left; margin-left:-110px;}
+	.main .bmtj .box ul{ padding-left:110px; float:left; width:125px; margin-bottom:15px;position: relative;}
+	.main .bmtj .box ul li{ line-height:21px;}
+	.main .bmtj .box ul li.bm-pic{ position: absolute; top: 0; left:0;}
 	.main .bmtj .box ul li.name span{ color:#ff0000;}
 	.main .bmtj .box ul li a.more{ background:url(show-pic.gif) no-repeat; display:block; width:73px; height:21px; text-indent:-9999px;}
 	
@@ -180,7 +180,7 @@ a:hover { color: #118DD0; text-decoration:underline;}
 .sidebar .lanmu li a:link,.sidebar .lanmu li a:visited{ display:block; height:30px; line-height:30px; padding-left:30px; border-bottom:1px dashed #ddd; background:url(./images/icon.jpg) no-repeat 10px center; color:#333; overflow:hidden;}
 .sidebar .lanmu li a:hover,{ border-bottom:1px solid #ccc; background-position:15px center; text-decoration:none;}*/
 .sidebar li.widget{ margin-bottom:15px;}
-.sidebar li.widget h2{ height:29px; line-height:29px; background:url(./images/sid-bt-bg.jpg) no-repeat; padding:0 10px; color:#fff;}
+.sidebar li.widget h2{ height:29px; line-height:29px; background:url(./images/sid-bt-bg.jpg) no-repeat; padding:0 10px; color:#fff; font-size:18px;}
 .sidebar li.widget ul li a:link,.sidebar li.widget ul li a:visited{ display:block; height:30px; line-height:30px; padding-left:30px; border-bottom:1px dashed #ddd; background:url(./images/icon.jpg) no-repeat 10px center; color:#333; overflow:hidden;}
 .sidebar li.widget ul li a:hover{ border-bottom:1px solid #ccc; background-position:15px center; text-decoration:none;}
 
@@ -195,5 +195,8 @@ a:hover { color: #118DD0; text-decoration:underline;}
 .post .title,.post p.sub{ text-align:center;}
 .post .title { font-size:16px; line-height:30px; margin-top:15px;}
 .post .hr{ border-bottom:1px solid #ddd; margin-bottom:15px;}
+.post-list{ text-align:right;border-bottom: 1px dashed #CCCCCC; margin-top: 15px;}
+.post-list h3{float:left;}
+.post-list h3 a{ font-size:14px;}
 
 #footer{ text-align:center; margin:15px auto 0; padding:15px 0; background:#eee; line-height:21px; border-top:1px solid #ddd;}
