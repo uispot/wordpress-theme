@@ -37,7 +37,6 @@ foreach($wenzhang as $v){
 						$recent = new WP_Query("cat=13&showposts=12"); 
 						while($recent->have_posts()) : $recent->the_post();
 						?>
-							<li><a href=""></a></li>
 						
             	<ul>                	
 					<?php
@@ -58,9 +57,10 @@ foreach($wenzhang as $v){
                     	<a href="<?php the_permalink() ?>"><img src="<?php post_thumbnail_src(100); ?>" width="100" height="130" alt="保姆：<?php the_title(); ?>"  title="保姆：<?php the_title(); ?>"/></a><br />
                     	推荐：<img src="<?php bloginfo('template_url'); ?>/images/zs-pic-5.gif" width="70" height="15" />
 					</li>
-                </ul>
+                </ul>				
                 <?php endwhile; ?>
             </div>
+			<p style="text-align:center;"><?php pagenavi(); ?> </p>
         </div>
         <?php
 		}else{
@@ -106,13 +106,15 @@ foreach($wenzhang as $v){
                     
                     </p>
             	</div>
-                
+                 
             </div>
-            <?php endwhile; else: ?>
+            <?php endwhile;?>
+				<p style="text-align:center;"><?php pagenavi(); ?> </p>   
+			<?php else: ?>
               <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
             <?php endif; ?>
            
-      <p style="text-align:center;"><?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?> </p>            
+            
 
 <?php
 		}
