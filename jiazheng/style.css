@@ -199,4 +199,8 @@ a:hover { color: #118DD0; text-decoration:underline;}
 .post-list h3{float:left;}
 .post-list h3 a{ font-size:14px;}
 
+/* fuwuNews */
+.fuwuNews .hd{ line-height:30px; padding:0 10px; background:#FF931E; color:#fff;}
+.fuwuNews .box{border:1px solid #FF931E; padding:15px 25px; line-height:21px;}
+
 #footer{ text-align:center; margin:15px auto 0; padding:15px 0; background:#eee; line-height:21px; border-top:1px solid #ddd;}
