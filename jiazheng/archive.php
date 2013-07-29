@@ -34,8 +34,7 @@ foreach($wenzhang as $v){
             <div class="box clearfix">
 			
 				<?php 
-						$recent = new WP_Query("cat=13&showposts=12"); 
-						while($recent->have_posts()) : $recent->the_post();
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 						?>
 						
             	<ul>                	
@@ -58,7 +57,11 @@ foreach($wenzhang as $v){
                     	推荐：<img src="<?php bloginfo('template_url'); ?>/images/zs-pic-5.gif" width="70" height="15" />
 					</li>
                 </ul>				
-                <?php endwhile; ?>
+                <?php endwhile;?>
+					<p style="text-align:center;"><?php pagenavi(); ?> </p>   
+				<?php else: ?>
+				  <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+				<?php endif; ?>
             </div>
 			<p style="text-align:center;"><?php pagenavi(); ?> </p>
         </div>
@@ -116,7 +119,7 @@ foreach($wenzhang as $v){
            
             
 
-<?php
+		<?php
 		}
 		?>
     </div>
@@ -124,5 +127,5 @@ foreach($wenzhang as $v){
     	<?php get_sidebar(); ?>
     </div>
 </div>
-</div>
+
 <?php get_footer(); ?>
