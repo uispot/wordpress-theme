@@ -1,0 +1,335 @@
+/* header */
+#header{ height:66px; overflow:hidden;}
+.site_logo{ float:left;}
+.top_right{ float:right; color:#009900; text-align:right;}
+
+#main_container {
+    height: 392px;
+}
+.main_dark {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+    height: 350px;
+    margin: 15px auto;
+    width: 952px;
+}
+.main_image {
+    background: url("../images/hp_main.jpg") no-repeat scroll right top #E9D6C9;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+}
+.fade_image {
+    height: 312px;
+    overflow: hidden;
+    width: 946px;
+}
+.main_image h2 {
+    color: #333333;
+    font-family: Georgia;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 30px;
+    padding-left: 36px;
+}
+.fade_image h1 {
+    font-family: "Microsoft YaHei",Hei,SimHei;
+}
+.main_image .fade_image h3 {
+    color: #000000;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 28px;
+    margin: 0;
+    padding: 18px 0 8px 42px;
+    width: 520px;
+}
+#home_desc_c {
+    height: 126px;
+    overflow: hidden;
+}
+#home_desc_c strong {
+    font-size: 18px;
+    margin: 0 0.2em;
+}
+#home_desc_c small {
+    font-size: 16px;
+}
+#home_socks_c {
+    position: relative;
+}
+#home_desc2_c {
+    background: none repeat scroll 0 0 #666666;
+}
+#home_desc2_c strong {
+    color: #FFFFFF;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 40px;
+    margin-left: 12px;
+}
+#home_share {
+    float: right;
+    left: -12px;
+    position: relative;
+    top: -30px;
+}
+
+/* */
+#others_container {
+    /*height: 470px;*/
+    overflow: hidden;
+}
+.home_left {
+    display: inline;
+    float: left;
+    height: 170px;
+    overflow: hidden;
+    padding: 0 8px;
+    width: 364px;
+}
+.home_left img {
+    float: left;
+    margin: 15px 5px;
+}
+.home_badge {
+    float: left;
+}
+.home_badge ul {
+    line-height: 200%;
+    list-style: square outside none;
+    margin-left: 20px;
+}
+.home_center {
+    border-left: 1px dashed #CCCCCC;
+    border-right: 1px dashed #CCCCCC;
+    display: inline;
+    float: left;
+    height: 170px;
+    padding: 0 20px;
+    width: 265px;
+}
+.home_quote {
+    background: url("http://www.nanrenwa.com/_img/home/quotes.gif") no-repeat scroll 0 30px transparent;
+    line-height: 25px;
+}
+.home_quote div {
+    color: #454545;
+    font: 12px/14px Helvetica,Arial,Verdana,sans-serif;
+    margin-top: 12px;
+    text-align: right;
+}
+.home_quote ul {
+    padding-top: 6px;
+}
+.home_quote li {
+    text-indent: 2.5em;
+}
+.home_right {
+    clear: right;
+    display: inline;
+    float: right;
+    overflow: hidden;
+    padding: 0 12px;
+    width: 240px;
+}
+.home_right h4, .home_left h4, .home_press h4, .home_quote h4 {
+    color: #336699;
+    font-family: Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 0 0 12px;
+}
+
+/**/
+.footer {
+    background: url("../images/bg_footer.png") no-repeat scroll 0 0 transparent;
+    color: #999999;
+    margin: 15px auto 0;
+    padding-top: 20px;
+    text-align: center;
+    width: 960px;
+}
+.footer li {
+    display: inline;
+    padding: 0 1em;
+}
+.footer a:link, .footer a:visited {
+    font-weight: bold;
+}
+.footer a:hover {
+    color: #467C0E;
+    text-decoration: none;
+}
+.footer p {
+    font-size: 12px;
+    margin-top: 1em;
+}
+
+/**/
+.headwrap {
+    background: url("../images/bg_header.gif") repeat-x scroll 0 0 transparent;
+    height: 76px;
+    overflow: hidden;
+}
+.header {
+    margin: 0 auto;
+    width: 960px;
+}
+h1#about {
+    background: url("../images/about.png") no-repeat scroll 0 0 transparent;
+	 text-indent: -9999em;
+}
+#head_link {
+    background: url("http://www.nanrenwa.com/_img/header_logo5.1.v2.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 63px;
+    text-indent: -99999px;
+    width: 350px;
+}
+#flows_c {
+    height: 1px;
+    position: absolute;
+    width: 1px;
+}
+.about_wrap {
+    background: none repeat scroll 0 0 #FFFFFF;
+    overflow: hidden;
+    padding: 20px;
+    width: 920px;
+}
+.about_padding {
+    padding: 0 10px;
+}
+.about_nav {
+    border-bottom: 1px dotted #797979;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+.about_nav a {
+    font-size: 14px;
+    margin: 0 12px;
+    text-decoration: none;
+}
+.about_nav a:link, .about_nav a:visited {
+    color: #1B6085;
+}
+.about_nav a:hover {
+    color: #467C0E;
+}
+#about_active {
+    background: none repeat scroll 0 0 #CAD7EC;
+    display: inline-block;
+    padding: 2px 12px;
+}
+.text_left, .faq_left {
+    display: inline;
+    float: left;
+    width: 420px;
+}
+.about_left p, .faq_left p, .faq_right p {
+    color: #454545;
+    line-height: 24px;
+    margin: 12px 0 20px;
+}
+.text_left h1 {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    margin-top: 0;
+}
+.text_left h2, .text_right h2 {
+    color: #336699;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 18px;
+    margin-top: 0;
+}
+
+.about_left {
+    display: inline;
+    float: left;
+    width: 520px;
+}
+.about_left h2 {
+    color: #000000;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 25px;
+    margin-bottom: 28px;
+}
+.about_left h2 span {
+    font-size: 16px;
+    font-weight: 400;
+}
+.about_left h3 {
+    font-weight: bold;
+}
+.about_right {
+    display: inline;
+    float: right;
+    width: 300px;
+}
+.about_right h2 {
+    margin-bottom: 1em;
+}
+.right_line {
+    border-left: 1px solid #797979;
+    padding: 0 20px 20px;
+}
+
+.press_wrap {
+    margin-top: 32px;
+}
+.press_logo {
+    display: inline;
+    float: left;
+    padding-bottom: 18px;
+}
+.press_text {
+    display: inline;
+    float: right;
+    padding-bottom: 18px;
+    width: 360px;
+}
+.press_text h1 {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
+}
+.press_text h2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0 0 6px;
+}
+.press_text p {
+    color: #454545;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 6px 0 0;
+}
+.press_divider {
+    border-top: 1px dotted #CCCCCC;
+    clear: both;
+    display: block;
+    height: 1px;
+    margin: 12px 0 0;
+    padding: 12px 0 0;
+}
+.press_text a:link, .press_text a:visited {
+    color: #007BAE;
+    text-decoration: none;
+}
+.press_text a:hover {
+    color: #CC3300;
+}

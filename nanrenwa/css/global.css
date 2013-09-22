@@ -1,0 +1,87 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none outside none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.f0 {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.f1 {
+    background: none repeat scroll 0 0 #EEEEEE;
+}
+.f2 {
+    background: none repeat scroll 0 0 #DDDDDD;
+}
+.f3 {
+    background: none repeat scroll 0 0 #CCCCCC;
+}
+.f4 {
+    background: none repeat scroll 0 0 #999999;
+}
+.y {
+    font-family: Helvetica,STHeiti,"Microsoft YaHei";
+}
+div.zopim {
+    left: 0;
+}
+a {
+    color: #336699;
+}
+a:hover {
+    color: #467C0E;
+    text-decoration: underline;
+}
+b {
+    font-weight: bold;
+}
+a, a:focus, input, button {
+    outline: medium none;
+}
+.clearit:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.clearit {
+    clear: both;
+    display: block;
+    height: 1px;
+    overflow: hidden;
+}
+
+body {
+    background: url("../images/bg.png") repeat-x scroll 0 0 white;
+    color: #333333;
+    font: 14px/20px 'Lucida Grande',Helvetica,Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 960px;
+}
