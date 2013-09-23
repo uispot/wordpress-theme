@@ -32,10 +32,8 @@ foreach($wenzhang as $v){
                 <p class="gz-times"><b>工作时间：</b><span>早8：30（上班） 至 晚18：00点（下班）</span></p>
             </div>
             <div class="box clearfix">
-			
-				<?php 
+
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-						?>
 						
             	<ul>                	
 					<?php
@@ -57,8 +55,7 @@ foreach($wenzhang as $v){
                     	推荐：<img src="<?php bloginfo('template_url'); ?>/images/zs-pic-5.gif" width="70" height="15" />
 					</li>
                 </ul>				
-                <?php endwhile;?>
-					<p style="text-align:center;"><?php pagenavi(); ?> </p>   
+                <?php endwhile;?> 
 				<?php else: ?>
 				  <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 				<?php endif; ?>
