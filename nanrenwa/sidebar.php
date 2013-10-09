@@ -7,6 +7,19 @@
 ?>
 
 <div class="about_right right_line">
+	
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
+	<?php echo "111";?>
+    	
+	<?php endif; ?>
+
+    <div id="right_sliding">
+
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : ?>
+		<?php echo "2222";?>
+        <?php endif; ?>
+        
+    </div>
 
 	<h2 class="y">联系我们</h2>
 

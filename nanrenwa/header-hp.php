@@ -36,9 +36,12 @@
 </head>
 
 <body>
-<div class="headwrap">
-	<div class="header">
-		<a id="head_link" title="大冬枣网DaDongZao首页" href="http://www.dadongzao.com">大冬枣网DaDongZao首页</a>
+<div class="container">
+<div id="header">
+	<div class="site_logo"><a href="<?php echo get_option('home');?>" title="<?php bloginfo('name');?>"><img src="<?php bloginfo('template_url'); ?>/images/home_logo.png" alt="<?php bloginfo('name');?>"/></a></div>
+	<div class="top_right">
+		<div class="follow"></div>
+		<div class="phone">冬枣代收:159-1006-6206 / <a href="#">淘宝店铺</a></div>
 	</div>
 </div>
 
